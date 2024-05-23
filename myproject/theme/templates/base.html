@@ -1,0 +1,26 @@
+{% load static tailwind_tags %}
+{% load static %}
+{% load django_htmx %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <title>My GRUG Stack</title>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+       {% tailwind_css %}
+       <!--  ///_hyperscript library https://unpkg.com/hyperscript.org@0.9.12/dist/_hyperscript.min.js -->
+       <script src="{% static 'js/dist/hyperscript.min.js' %}"></script>
+       <!-- htmx library https://unpkg.com/htmx.org@1.9.12/dist/htmx.min.js -->
+       <script src="{% static 'js/dist/htmx.min.js' %}" defer></script> 
+   </head>
+
+   <body class="bg-gray-50 font-serif leading-normal tracking-normal">
+      <div class="container mx-auto">
+          <section class="flex items-center justify-center h-screen">
+              <h1 class="text-5xl">The GRUG Stack</h1>
+          </section>
+      </div>
+   </body>
+</html>
