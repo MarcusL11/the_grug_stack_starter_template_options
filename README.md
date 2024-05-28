@@ -2,7 +2,6 @@
 
 The GRUG Stack Start Template includes the following essential packages:
 
-### Required Packages:
 - **[Django](https://pypi.org/project/Django/)**: The backbone of our stack, Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
 - **[Hyperscript](https://hyperscript.org/)**: A powerful scripting language for enhancing HTML with additional interactivity.
 - **[Django HTMX](https://pypi.org/project/django-htmx/)**: Integrates HTMX, which allows you to build modern user interfaces with fewer JavaScript requirements.
@@ -30,10 +29,8 @@ source venv/bin/activate
 Clone the repository and install the required packages using the following commands:
 ```bash
 git clone https://github.com/MarcusL11/the_grug_stack_starter_template.git
+
 python -m pip install -r requirements.txt
 ```
-
-And start the Django server:
-
 
 
