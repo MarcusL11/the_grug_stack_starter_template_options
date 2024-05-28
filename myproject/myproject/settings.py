@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "theme",
     "django_htmx",
     "django_components",
+    "widget_tweaks",
     # apps
     "accounts",
 ]
