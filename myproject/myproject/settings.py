@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import os
 from pathlib import Path
+import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -53,6 +54,7 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
+
 AUTH_USER_MODEL = "accounts.CustomUser"  # new
 
 MIDDLEWARE = [
@@ -65,6 +67,19 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_htmx.middleware.HtmxMiddleware",
 ]
+
+TESTING = "test" in sys.argv
+
+if not TESTING:
+    INSTALLED_APPS = [
+        *INSTALLED_APPS,
+        "debug_toolbar",
+    ]
+    MIDDLEWARE = [
+        "debug_toolbar.middleware.DebugToolbarMiddleware",
+        *MIDDLEWARE,
+    ]
+
 
 ROOT_URLCONF = "myproject.urls"
 
